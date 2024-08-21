@@ -1,23 +1,27 @@
 # TASK A: Define a variable 'word' that holds the correct word for the wordle game
-
+word = "START"
 
 # TASK B: Define a function 'makeAGuess()' that passes in a users guess as a parameter
-
+def makeAGuess(userGuess):
 
   # TASK C:Define a variable 'hint' that holds an empty string
- 
+ hint = ""
 
   # TASK D: Build a loop that loops from 0 to the length of word
-  
+  for i in range(5)
+
 
     # TASK E: Check if the current letter of guess matches the current letter of word. If so add the letter "G" to the hint
-    
+    if userGuess[i] == word[i]:
+      hint +="g"
     
     # TASK F: If the previous condition is fales, check if the current letter of guess is in word at all. If so add the letter "Y" to the hint
-    
+    elif userGuess[i] in word:
+      hint = "y"
 
     # TASK G: If the previous two conditions are false, add the symbol "-" to the hint
-    
+    else: 
+      hint = "r"
   # TASK H: Return hint
   
 
