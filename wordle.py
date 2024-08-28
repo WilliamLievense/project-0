@@ -24,25 +24,25 @@ def makeAGuess(userGuess):
       hint = "r"
   # TASK H: Return hint
   
+def playWordle(word):
 
+  print("Let's play wordle! /n Guess the Wordle in 6 tries. Each guess must be a valid 5-letter word. For each guess, a hint will tell you how many letters you've guessed correctly. A G represents a letter in the word and in the correct spot.. A Y represents a letter in the word but in the wrong spot. A - represents a letter not in the word in any spot. \n Guess below! \n")
 
-print("Let's play wordle! /n Guess the Wordle in 6 tries. Each guess must be a valid 5-letter word. For each guess, a hint will tell you how many letters you've guessed correctly. A G represents a letter in the word and in the correct spot.. A Y represents a letter in the word but in the wrong spot. A - represents a letter not in the word in any spot. \n Guess below! \n")
+  # TASK I: Build a loop that loops 6 times (representing the number of guesses a user has)
+  for i in range(6):
 
-# TASK I: Build a loop that loops 6 times (representing the number of guesses a user has)
-for i in range(6):
+    # TASK J: Define a variable 'guess'. prompt the user for their 5-letter guess and store it in the variable
+    guess = input("What is you 5-Letter guess in all caps?")
+    # TASK K: Define a variable 'hint' and set the return of makeAGuess(guess) to that variable
+    hint = makeAGuess(guess)
+    # TASK L: Print hint
+    print(hint)
+    # TASK M: Check if hint = "GGGGG". If so the user has won. Print a win message and break the loop
+    if hint == "ggggg":
+    print("You Win!!!")
+    break
 
-  # TASK J: Define a variable 'guess'. prompt the user for their 5-letter guess and store it in the variable
-  guess = input("What is you 5-Letter guess in all caps?")
-  # TASK K: Define a variable 'hint' and set the return of makeAGuess(guess) to that variable
-  hint = makeAGuess(guess)
-  # TASK L: Print hint
-  print(hint)
-  # TASK M: Check if hint = "GGGGG". If so the user has won. Print a win message and break the loop
-  if hint == "ggggg":
-   print("You Win!!!")
-   break
-
-# TASK N: After the loop has finished, meaning the user has run out of guesses, check if hint != "GGGGG". If so, the user has lost. Print a lose message. 
-if hint != "ggggg":
-    print("You lost, better luck next time. The word was", word)
-    break 
+  # TASK N: After the loop has finished, meaning the user has run out of guesses, check if hint != "GGGGG". If so, the user has lost. Print a lose message. 
+  if hint != "ggggg":
+      print("You lost, better luck next time. The word was", word)
+      break 
