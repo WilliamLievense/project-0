@@ -16,7 +16,7 @@ class Character:
         recieve_item(item: Any) -> None:
             Adds the given item to the character's inventory.
     """
-        def __init__(self, name, health,inventory, dialogue):
+        def __init__(self, 3, health,inventory, dialogue):
         self.name = name
         self.health = health
         self.inventory = inventory
