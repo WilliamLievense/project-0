@@ -1,4 +1,3 @@
-class Character:
 """
     Represents a character in the game.
     
@@ -16,7 +15,8 @@ class Character:
         recieve_item(item: Any) -> None:
             Adds the given item to the character's inventory.
     """
-        def __init__(self, 3, health,inventory, dialogue):
+class Character:
+    def __init__(self,name, health,inventory, dialogue):
         self.name = name
         self.health = health
         self.inventory = inventory

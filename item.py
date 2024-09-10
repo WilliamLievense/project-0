@@ -1,9 +1,24 @@
-class item
-    def __init__(self, name, description):
-        self.name = name
-        self.description = description
-        self.points = points
+class chocolate:
+    def __init__(self):
+        self.name = "chocolate"
+        self.description = "chocolate bar"
+        self.healing = 1
 
-def use_item(self, player):
-    player.health += self.points
-    self.points = 0
+
+    def eat(self, player):
+        player.health += self.healing
+        self.healing = 0
+
+
+class key:
+    def __init__(self):
+        self.name = "key"
+        self.description = "A key to open a door"
+        self.unlock = True
+    def usekey(self, door):
+        door.open = True
+class door:
+    def __init__(self):
+        self.name = "door"
+        self.description = "A door that requires a key"
+        self.open = False

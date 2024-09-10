@@ -1,7 +1,8 @@
-import Character from character
-import Item from item
-import playWordle from wordle
+from character import Character 
+from item import door, chocolate, key
+from wordle import playWordle 
 
+chocolate = chocolate()
 print("Welcome to the game!")
 d1 = input("You are walking in a forest, do you A. go deeper, B. leave, or C. go off the path?")
 if d1 == "A":
@@ -21,16 +22,23 @@ elif d1 == "C":
         d2_b
 
 def d2_a():
-    print("You went into the house")
+    d3 = input("You went into the house, you find" + chocolate.name + "would you like to eat it? y/n")
+    if d3 == "y":
+        input("You eat the chocolate and feel better, However you see a strange man staring at you, and be begins to speak.") 
+        chocolate.eat()
+        character = Character("Man", 100, [], {"Hello, i am Mr Audieau"})
+        character.talk_to_player("Hello, i am Mr Audieau, you are welcome to stay here! Congradulations you have won the game!")
 
 def d2_b():
-    print("You stay in the forst and are freezing cold as it turns night", life -1)
+    input("You stay in the forst and are freezing cold as it turns night", life -1, "You see a shed, do you approach it? y/n")
+    if d2_b == "y":
+        d4 = input("You go into the shed, you find a" + key.name + "and a" + door.name + "would you like to use the key on the door? y/n")
+        if d4 == "y":
+            door.open = True
+            print("You open the door and go inside, you find a a little boy laying on the ground, and he says to you")
+            character = Character("Boy", 100, [], {"Hello, i am Ryan"})
+            character.talk_to_player("Hello, i am Ryan, you are welcome to stay here! If you can beat this wordle you can win the game!")
+            playWordle("ITEMS")
+        if d4 == "n":
+            print("you stay outside in the nigh all night, and die, game over")
 
-
-else:
-    print("You entered wrong, try again.")
-    star = Item("Star", "A shiny star", 10)
-    a1a print("You picked up the star, Yay! you see a man approaching you, do you want to talk to him? (y/n)")
-    if d1a == "y": 
-       character = Character("Man", 100, [], {"Hello, i am Mr Audieau"})
-       character.talk_to_player("Hello, i am Mr Audieau")

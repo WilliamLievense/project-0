@@ -1,11 +1,11 @@
 # TASK A: Define a variable 'word' that holds the correct word for the wordle game
-word = "PENIS"
+word = "ITEMS"
 
 # TASK B: Define a function 'makeAGuess()' that passes in a users guess as a parameter
 def makeAGuess(userGuess):
 
   # TASK C:Define a variable 'hint' that holds an empty string
- hint = ""
+  hint = ""
 
   # TASK D: Build a loop that loops from 0 to the length of word
   for i in range(5):
@@ -39,10 +39,10 @@ def playWordle(word):
     print(hint)
     # TASK M: Check if hint = "GGGGG". If so the user has won. Print a win message and break the loop
     if hint == "ggggg":
-    print("You Win!!!")
-    break
+      print("You Win!!!")
+      break
 
   # TASK N: After the loop has finished, meaning the user has run out of guesses, check if hint != "GGGGG". If so, the user has lost. Print a lose message. 
   if hint != "ggggg":
       print("You lost, better luck next time. The word was", word)
-      break 
+ 
