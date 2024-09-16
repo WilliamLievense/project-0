@@ -22,12 +22,16 @@ elif d1 == "C":
         d2_b
 
 def d2_a():
-    d3 = input("You went into the house, you find" + chocolate.name + "would you like to eat it? y/n")
+    input("You go towards the light and find a house, do you go inside? y/n")
+    if d2_a == "y":
+        d3 = input("You went into the house, you find" + chocolate.name + "would you like to eat it? y/n")
     if d3 == "y":
         input("You eat the chocolate and feel better, However you see a strange man staring at you, and be begins to speak.") 
         chocolate.eat()
         character = Character("Man", 100, [], {"Hello, i am Mr Audieau"})
         character.talk_to_player("Hello, i am Mr Audieau, you are welcome to stay here! Congradulations you have won the game!")
+    elif d2_a == "n":
+            print("You stay outside and freeze to death game over")
 
 def d2_b():
     input("You stay in the forst and are freezing cold as it turns night", life -1, "You see a shed, do you approach it? y/n")
